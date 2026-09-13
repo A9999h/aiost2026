@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Layered shark logo</title>
+  <desc id="desc">A friendly grey shark on a warm yellow circular background, separated into animation-ready SVG layers.</desc>
+
+  <defs>
+    <radialGradient id="background-gradient" cx="48%" cy="42%" r="67%">
+      <stop offset="0%" stop-color="#e6c761"/>
+      <stop offset="1" stop-color="#d8b746"/>
+    </radialGradient>
+    <linearGradient id="body-gradient" gradientUnits="userSpaceOnUse" x1="280" y1="260" x2="820" y2="730">
+      <stop offset="0%" stop-color="#3e4148"/>
+      <stop offset="1" stop-color="#484b52"/>
+    </linearGradient>
+    <linearGradient id="belly-gradient" x1="0.15" y1="0.2" x2="0.82" y2="0.82">
+      <stop offset="0%" stop-color="#f7f7f4"/>
+      <stop offset="1" stop-color="#e8e9e7"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <style>
+      #shark {
+        transform-box: view-box;
+        transform-origin: 512px 560px;
+        animation: shark-float 4.2s ease-in-out infinite;
+        will-change: transform;
+      }
+
+      #tail {
+        transform-box: view-box;
+        transform-origin: 205px 566px;
+        animation: tail-sway 1.85s ease-in-out infinite;
+        will-change: transform;
+      }
+
+      #near-pectoral-fin {
+        transform-box: view-box;
+        transform-origin: 456px 600px;
+        animation: fin-drift 3.15s ease-in-out infinite;
+        will-change: transform;
+      }
+
+      #shadow {
+        transform-box: view-box;
+        transform-origin: 543px 742px;
+        animation: shadow-float 4.2s ease-in-out infinite;
+        will-change: transform, opacity;
+      }
+
+      @keyframes shark-float {
+        0%, 100% { transform: translateY(3px) rotate(-0.35deg); }
+        50% { transform: translateY(-10px) rotate(0.55deg); }
+      }
+
+      @keyframes tail-sway {
+        0%, 100% { transform: rotate(-3.5deg); }
+        50% { transform: rotate(4.5deg); }
+      }
+
+      @keyframes fin-drift {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(-1.8deg); }
+      }
+
+      @keyframes shadow-float {
+        0%, 100% {
+          transform: scale(1, 1);
+          opacity: 0.16;
+        }
+        50% {
+          transform: scale(0.94, 0.82);
+          opacity: 0.10;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #shark,
+        #tail,
+        #near-pectoral-fin,
+        #shadow {
+          animation: none;
+        }
+      }
+    </style>
+    <clipPath id="body-clip">
+      <path d="M183 573 C257 463 365 379 491 337 C623 293 784 316 920 366 C950 377 967 395 959 422 C938 495 868 568 789 620 C690 685 569 716 450 705 C347 695 258 651 183 573 Z"/>
+    </clipPath>
+  </defs>
+
+  <g id="background">
+    <circle id="background-circle" cx="512" cy="512" r="512" fill="url(#background-gradient)"/>
+  </g>
+
+  <g id="shadow" opacity="0.14">
+    <ellipse id="shark-shadow" cx="543" cy="742" rx="298" ry="35" fill="#7f681c" filter="url(#soft-shadow)"/>
+  </g>
+
+  <g id="shark" aria-label="shark">
+    <!-- Layers below the white body base. -->
+    <g id="under-fins">
+      <path id="rear-lower-fin" d="M258 605 C252 638 232 666 228 690 C226 704 244 705 267 694 C291 682 317 655 337 620 Z" fill="url(#body-gradient)"/>
+      <path id="far-pectoral-fin" d="M669 654 C690 683 716 719 735 733 C752 745 758 727 753 703 C748 678 736 654 720 632 Z" fill="#45484e"/>
+    </g>
+
+    <!-- Full white body base. -->
+    <g id="body-white-base">
+      <path id="body-white" d="M183 573 C257 463 365 379 491 337 C623 293 784 316 920 366 C950 377 967 395 959 422 C938 495 868 568 789 620 C690 685 569 716 450 705 C347 695 258 651 183 573 Z" fill="url(#belly-gradient)"/>
+    </g>
+
+    <!-- The near fin sits above the white base, while its extended root is hidden below the grey body. -->
+    <g id="near-pectoral-fin">
+      <path id="near-pectoral-fin-shape" d="M548 550 C531 579 520 600 510 619 C489 653 463 682 433 705 C418 716 403 724 392 729 C379 735 367 733 356 736 C348 738 340 734 338 728 C336 722 343 713 349 704 C362 681 370 657 370 637 C370 617 367 599 368 586 C397 595 425 598 452 591 C487 582 518 564 548 550 Z" fill="url(#body-gradient)"/>
+    </g>
+
+    <!-- Grey upper body. -->
+    <g id="body-grey-upper">
+      <path id="body-grey" d="M183 573 C257 463 365 379 491 337 C623 293 784 316 920 366 C950 377 967 395 959 422 C939 423 912 426 883 434 C785 459 689 487 596 523 C560 537 538 552 526 579 C507 622 481 645 448 648 C438 649 429 649 422 647 C333 639 249 612 183 573 Z" fill="url(#body-gradient)"/>
+      <g id="dorsal-fin">
+        <path id="dorsal-fin-shape" d="M404 391 C419 360 418 330 404 286 C396 261 384 236 392 226 C407 210 449 228 486 253 C523 278 549 306 570 337 C508 344 451 362 404 391 Z" fill="url(#body-gradient)"/>
+      </g>
+    </g>
+
+    <!-- Tail overlaps the body. -->
+    <g id="tail" transform-origin="190px 576px">
+      <path id="tail-fin" d="M205 548 C158 502 111 459 77 447 C61 441 69 468 85 499 C110 547 120 573 111 615 C105 644 91 672 99 681 C108 691 137 672 157 652 C179 630 194 607 205 585 C214 569 216 558 205 548 Z" fill="url(#body-gradient)"/>
+    </g>
+
+    <!-- Mouth line and sawtooth-shaped triangular teeth. -->
+    <g id="mouth-and-teeth">
+      <path id="mouth-line" d="M711 530 C752 512 822 508 873 527" fill="none" stroke="#22252b" stroke-width="7" stroke-linecap="round"/>
+      <g id="teeth" fill="#111216">
+        <path id="tooth-1" d="M750 520 L764 539 L778 516 Z"/>
+        <path id="tooth-2" d="M781 515 L797 538 L811 513 Z"/>
+        <path id="tooth-3" d="M814 514 L829 537 L842 517 Z"/>
+        <path id="tooth-4" d="M844 519 L856 538 L868 526 Z"/>
+      </g>
+    </g>
+
+    <!-- Eye and gills are the uppermost details. -->
+    <g id="face-details">
+      <g id="eye">
+        <circle id="eye-black" cx="714" cy="425" r="22" fill="#090a0e"/>
+        <circle id="eye-highlight" cx="706" cy="416" r="5" fill="#30333a" opacity="0.55"/>
+      </g>
+      <g id="gills" fill="none" stroke="#292c33" stroke-width="7" stroke-linecap="round">
+        <path id="gill-1" d="M527 474 C523 497 530 519 546 535"/>
+        <path id="gill-2" d="M550 466 C545 493 553 516 570 535"/>
+        <path id="gill-3" d="M574 463 C569 489 577 510 593 527"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-shark-yellow: #DDB84F;
+    --color-warm-cream: #F7F4EA;
+    --color-paper-white: #FFFEF9;
+    --color-charcoal: #292B2F;
+    --color-graphite: #484A4F;
+    --color-soft-gray: #E7E3D9;
+    --color-pale-yellow: #F3E7B8;
+  }
+
+  body {
+    font-family: 'DM Sans', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+    color: #292B2F;
+    background-color: #F7F4EA;
+  }
+
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .font-serif-quote {
+    font-family: 'Newsreader', Georgia, serif;
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-0.8deg);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4.5s ease-in-out infinite;
+}
+
+@keyframes swim-drift {
+  0%, 100% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(6px) translateY(-5px);
+  }
+}
+
+.animate-swim {
+  animation: swim-drift 6s ease-in-out infinite;
+}

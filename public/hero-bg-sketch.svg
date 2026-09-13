@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Background Canvas Tint -->
+    <linearGradient id="canvasGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF6ED" />
+      <stop offset="50%" stop-color="#F8F4EA" />
+      <stop offset="100%" stop-color="#F5F0E4" />
+    </linearGradient>
+
+    <!-- Warm Golden Yellow Blob Gradient -->
+    <linearGradient id="yellowBlobGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E7CA67" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#DCB645" stop-opacity="0.45" />
+    </linearGradient>
+
+    <!-- Warm Ochre Accent Blob -->
+    <linearGradient id="ochreBlobGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#DEB753" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#C99E39" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Slate Grey Blob Gradient -->
+    <linearGradient id="greyBlobGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C5C0B7" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#A4A199" stop-opacity="0.38" />
+    </linearGradient>
+
+    <!-- Soft Charcoal Darker Blob Gradient -->
+    <linearGradient id="charcoalBlobGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9C9993" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#7C7872" stop-opacity="0.28" />
+    </linearGradient>
+
+    <!-- Grid Patterns -->
+    <pattern id="gridPattern" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#D7D1C5" stroke-width="0.85" opacity="0.75" />
+    </pattern>
+
+    <!-- Dot Matrix Pattern -->
+    <pattern id="dotMatrix" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.5" fill="#BDB7A9" opacity="0.65" />
+    </pattern>
+  </defs>
+
+  <!-- 1. Background Base -->
+  <rect width="1920" height="1080" fill="url(#canvasGrad)" />
+
+  <!-- 2. Organic Corner Shapes (Blobs) -->
+
+  <!-- Top-Right Blobs -->
+  <path d="M 1400 0 C 1460 70 1480 150 1550 180 C 1630 215 1740 180 1800 240 C 1850 290 1860 360 1920 380 L 1920 0 Z" fill="url(#greyBlobGrad)" />
+  <path d="M 1520 0 C 1510 90 1550 170 1620 230 C 1700 295 1800 250 1760 120 C 1740 50 1710 0 1680 0 Z" fill="url(#yellowBlobGrad)" />
+  <path d="M 1760 190 C 1730 250 1770 340 1830 380 C 1890 410 1940 370 1920 260 C 1910 200 1850 170 1760 190 Z" fill="url(#ochreBlobGrad)" />
+
+  <!-- Bottom-Right Blobs -->
+  <path d="M 1740 600 C 1680 680 1720 780 1760 840 C 1820 920 1920 890 1920 770 C 1920 660 1840 560 1740 600 Z" fill="url(#charcoalBlobGrad)" />
+
+  <!-- Bottom-Left Blobs -->
+  <path d="M 0 580 C 70 590 120 640 120 710 C 120 790 30 840 80 940 C 120 1010 190 1050 210 1080 L 0 1080 Z" fill="url(#greyBlobGrad)" />
+  <path d="M 20 620 C 120 630 180 690 190 770 C 200 850 140 920 70 940 C 10 950 -10 900 0 820 Z" fill="url(#yellowBlobGrad)" />
+  <path d="M 120 800 C 190 820 250 880 240 960 C 230 1040 160 1070 80 1060 C 40 1050 30 1000 70 910 Z" fill="url(#charcoalBlobGrad)" />
+
+  <!-- Top-Left Blob -->
+  <path d="M 0 0 C 60 40 110 90 90 160 C 70 230 10 260 0 270 Z" fill="url(#greyBlobGrad)" />
+
+  <!-- 3. Grid Patches -->
+  <!-- Top-Left Grid Box -->
+  <rect x="30" y="20" width="220" height="180" fill="url(#gridPattern)" />
+  <circle cx="130" cy="70" r="4" fill="none" stroke="#A8A193" stroke-width="1.2" />
+  <circle cx="75" cy="135" r="3" fill="none" stroke="#A8A193" stroke-width="1" />
+
+  <!-- Bottom-Left Grid Box -->
+  <rect x="230" y="850" width="200" height="150" fill="url(#gridPattern)" />
+
+  <!-- Top-Right L-Frame & Grid -->
+  <path d="M 1340 30 L 1340 140 L 1420 140" fill="none" stroke="#9C9588" stroke-width="1.2" />
+  <rect x="1730" y="340" width="160" height="260" fill="url(#gridPattern)" />
+
+  <!-- Dot Matrix Blocks -->
+  <rect x="0" y="360" width="130" height="240" fill="url(#dotMatrix)" />
+  <rect x="1050" y="15" width="220" height="70" fill="url(#dotMatrix)" />
+
+  <!-- 4. Systems Diagrams & Line Art -->
+
+  <!-- TOP-LEFT: Mindmap / Branch Flowchart -->
+  <g stroke="#9C9588" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Connecting flow curve from left -->
+    <path d="M 0 250 C 70 270 120 280 190 280" stroke-dasharray="4 4" />
+    <path d="M 0 350 C 90 350 140 300 200 290" />
+    <circle cx="200" cy="285" r="5" fill="#D7D0C3" />
+
+    <path d="M 205 285 C 270 270 330 200 360 150" />
+    <circle cx="365" cy="148" r="16" fill="#EDE7DA" stroke="#9C9588" />
+
+    <!-- Branching lines to horizontal list -->
+    <path d="M 382 148 C 420 130 450 100 480 80" />
+    <path d="M 480 80 L 580 80" />
+    <circle cx="585" cy="80" r="3" fill="#9C9588" />
+
+    <!-- Pen icon -->
+    <path d="M 535 60 L 545 50 L 550 55 L 540 65 Z" fill="none" stroke="#9C9588" stroke-width="1" />
+    <path d="M 535 60 L 532 63" stroke="#9C9588" stroke-width="1" />
+
+    <!-- Horizontal bullet entries -->
+    <path d="M 425 125 L 540 125" />
+    <path d="M 428 140 L 550 140" />
+    <path d="M 430 155 L 520 155" />
+    <path d="M 432 170 L 545 170" />
+
+    <!-- Downward branch -->
+    <path d="M 365 165 L 365 290" />
+    <circle cx="365" cy="300" r="15" fill="#EDE7DA" stroke="#9C9588" />
+
+    <!-- Curved branch to second node -->
+    <path d="M 380 300 C 420 300 450 280 470 295" />
+    <path d="M 470 295 C 490 305 520 305 540 305" />
+    <path d="M 470 315 L 520 315" />
+
+    <!-- Arrow to Chinese annotation "標線" -->
+    <path d="M 450 210 L 490 200" stroke-dasharray="3 3" />
+    <path d="M 485 195 L 495 200 L 488 206" fill="none" />
+    <path d="M 450 225 C 445 220 445 210 455 205" />
+  </g>
+
+  <!-- Handwritten Annotation: 標線 -->
+  <text x="480" y="240" font-family="'Newsreader', 'Noto Sans TC', serif" font-size="16" fill="#7E776C" font-style="italic" letter-spacing="1">標線</text>
+
+  <!-- TOP-RIGHT: 3D Constellation Mesh -->
+  <g stroke="#A8A193" stroke-width="1.1" fill="none">
+    <!-- Starbursts -->
+    <g transform="translate(1360, 220)" stroke="#B8B1A4" stroke-width="1.2">
+      <line x1="0" y1="-12" x2="0" y2="12" />
+      <line x1="-12" y1="0" x2="12" y2="0" />
+      <line x1="-8" y1="-8" x2="8" y2="8" />
+      <line x1="8" y1="-8" x2="-8" y2="8" />
+    </g>
+    <g transform="translate(1160, 150)" stroke="#B8B1A4" stroke-width="1">
+      <line x1="0" y1="-8" x2="0" y2="8" />
+      <line x1="-8" y1="0" x2="8" y2="0" />
+      <line x1="-6" y1="-6" x2="6" y2="6" />
+      <line x1="6" y1="-6" x2="-6" y2="6" />
+    </g>
+
+    <!-- Constellation lines and dots -->
+    <polygon points="1460,200 1520,240 1580,210 1560,280 1480,310 1420,270" stroke="#9C9588" stroke-width="1.2" fill="none" />
+    <line x1="1460" y1="200" x2="1580" y2="210" stroke="#9C9588" stroke-width="0.9" />
+    <line x1="1460" y1="200" x2="1560" y2="280" stroke="#9C9588" stroke-width="0.9" />
+    <line x1="1520" y1="240" x2="1480" y2="310" stroke="#9C9588" stroke-width="0.9" />
+    <line x1="1420" y1="270" x2="1560" y2="280" stroke="#9C9588" stroke-width="0.9" />
+    <line x1="1580" y1="210" x2="1640" y2="170" stroke="#9C9588" stroke-width="0.9" stroke-dasharray="3 3" />
+
+    <!-- Vertices -->
+    <circle cx="1460" cy="200" r="3.5" fill="#EDE7DA" stroke="#9C9588" stroke-width="1.2" />
+    <circle cx="1520" cy="240" r="4.5" fill="#D7D0C3" stroke="#9C9588" stroke-width="1.2" />
+    <circle cx="1580" cy="210" r="3.5" fill="#EDE7DA" stroke="#9C9588" stroke-width="1.2" />
+    <circle cx="1560" cy="280" r="4.5" fill="#EDE7DA" stroke="#9C9588" stroke-width="1.2" />
+    <circle cx="1480" cy="310" r="3.5" fill="#D7D0C3" stroke="#9C9588" stroke-width="1.2" />
+    <circle cx="1420" cy="270" r="3" fill="#EDE7DA" stroke="#9C9588" stroke-width="1.2" />
+    <circle cx="1640" cy="170" r="3" fill="#EDE7DA" stroke="#9C9588" stroke-width="1.2" />
+  </g>
+
+  <!-- BOTTOM-LEFT: Isometric Box & Wireframe Network -->
+  <g stroke="#9C9588" stroke-width="1.2" fill="none">
+    <!-- Starburst -->
+    <g transform="translate(265, 550)" stroke="#B8B1A4" stroke-width="1.2">
+      <line x1="0" y1="-10" x2="0" y2="10" />
+      <line x1="-10" y1="0" x2="10" y2="0" />
+      <line x1="-7" y1="-7" x2="7" y2="7" />
+      <line x1="7" y1="-7" x2="-7" y2="7" />
+    </g>
+
+    <!-- Network Graph in bottom left -->
+    <polygon points="310,650 370,690 440,660 410,740 330,760" stroke="#9C9588" stroke-width="1" />
+    <line x1="310" y1="650" x2="410" y2="740" stroke="#9C9588" stroke-width="0.8" />
+    <line x1="370" y1="690" x2="330" y2="760" stroke="#9C9588" stroke-width="0.8" />
+    <line x1="440" y1="660" x2="510" y2="720" stroke="#9C9588" stroke-width="0.8" stroke-dasharray="3 3" />
+    <circle cx="310" cy="650" r="3.5" fill="#EDE7DA" stroke="#9C9588" />
+    <circle cx="370" cy="690" r="4.5" fill="#D7D0C3" stroke="#9C9588" />
+    <circle cx="440" cy="660" r="3.5" fill="#EDE7DA" stroke="#9C9588" />
+    <circle cx="410" cy="740" r="4" fill="#EDE7DA" stroke="#9C9588" />
+    <circle cx="330" cy="760" r="3" fill="#D7D0C3" stroke="#9C9588" />
+    <circle cx="510" cy="720" r="3" fill="#EDE7DA" stroke="#9C9588" />
+
+    <!-- Isometric Envelope/Box -->
+    <polygon points="640,860 760,860 760,910 640,910" stroke="#9C9588" stroke-width="1.2" />
+    <line x1="640" y1="860" x2="700" y2="810" stroke="#9C9588" stroke-width="1.2" />
+    <line x1="760" y1="860" x2="700" y2="810" stroke="#9C9588" stroke-width="1.2" />
+    <line x1="640" y1="910" x2="760" y2="860" stroke="#9C9588" stroke-width="0.8" stroke-dasharray="2 2" />
+  </g>
+
+  <!-- BOTTOM-RIGHT: Flow Pipeline & Annotation "綱線" -->
+  <g stroke="#9C9588" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Three Input lines into bracket fork -->
+    <line x1="1080" y1="860" x2="1140" y2="860" />
+    <line x1="1050" y1="885" x2="1150" y2="885" />
+    <line x1="1080" y1="905" x2="1140" y2="905" />
+    <!-- Bracket fork curve -->
+    <path d="M 1150 860 C 1190 870 1200 885 1220 885 L 1250 885" />
+    <path d="M 1150 905 C 1190 895 1200 885 1220 885" />
+
+    <!-- Chain of circular nodes -->
+    <circle cx="1275" cy="885" r="16" fill="#EDE7DA" stroke="#9C9588" />
+    <line x1="1291" y1="885" x2="1410" y2="885" />
+
+    <circle cx="1430" cy="885" r="17" fill="#EDE7DA" stroke="#9C9588" />
+    <line x1="1447" y1="885" x2="1575" y2="885" />
+
+    <!-- Arrow head over pipeline -->
+    <path d="M 1750 880 L 1762 885 L 1750 890" stroke="#9C9588" stroke-width="1.2" fill="none" />
+    <circle cx="1595" cy="885" r="19" fill="#EDE7DA" stroke="#9C9588" />
+    <line x1="1614" y1="885" x2="1760" y2="885" />
+
+    <!-- Curved branch downward from 1430,885 -->
+    <path d="M 1430 902 C 1430 960 1410 970 1410 990" />
+    <circle cx="1425" cy="1005" r="16" fill="#EDE7DA" stroke="#9C9588" />
+
+    <!-- Split fork into two branches -->
+    <path d="M 1441 1005 C 1490 985 1520 960 1560 970" />
+    <circle cx="1570" cy="970" r="4" fill="#9C9588" />
+    <path d="M 1441 1005 C 1490 1025 1520 1050 1560 1040" />
+    <circle cx="1570" cy="1040" r="4" fill="#9C9588" />
+
+    <!-- Dashed contour loop to right -->
+    <path d="M 1580 970 C 1630 920 1690 980 1720 950" stroke-dasharray="4 4" />
+    <circle cx="1740" cy="965" r="15" fill="#EDE7DA" stroke="#9C9588" stroke-dasharray="4 4" />
+
+    <!-- Arrow pointing to "綱線" -->
+    <path d="M 1500 830 C 1500 850 1500 860 1500 870" />
+    <path d="M 1495 862 L 1500 870 L 1505 862" fill="none" />
+    <path d="M 1485 810 C 1510 805 1520 815 1545 810" />
+
+    <path d="M 1640 820 C 1630 840 1625 860 1630 875" stroke-dasharray="3 3" />
+    <path d="M 1622 870 L 1630 876 L 1632 865" fill="none" />
+  </g>
+
+  <!-- Handwritten Annotation: 綱線 -->
+  <text x="1640" y="805" font-family="'Newsreader', 'Noto Sans TC', serif" font-size="16" fill="#7E776C" font-style="italic" letter-spacing="1">綱線</text>
+
+  <!-- Subtle vignette edge wash -->
+  <rect width="1920" height="1080" fill="none" stroke="#E7E2D5" stroke-width="1.5" />
+</svg>
