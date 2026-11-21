@@ -6,6 +6,7 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     base: '/aiost2026/',
+    build: {outDir: 'dist/aiost2026'},
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
