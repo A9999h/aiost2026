@@ -16,7 +16,7 @@
 
 ## 發布前需確認
 
-- [ ] Cloudflare Pages 專案名稱若不是 `pm-is-life-ai-ost`，需設定 `PUBLIC_SITE_URL` 為實際 production 網址，再重新建置。
+- [ ] 正式網址為 `https://event.pmislife.com/aiost2026/`（`astro.config.mjs` 已設定 `site` 與 `base`）；若建置環境設定了 `PUBLIC_SITE_URL`，請確認其值為 `https://event.pmislife.com`，再重新建置。
 - [ ] 以 Cloudflare Preview URL 檢查桌面、平板與手機的實際字級、表格捲動及提示詞複製操作。
 - [ ] 按內容修訂規格書逐段校對每章的完整提示詞、圖解與延伸資源敘述。
 - [ ] 正式發布前再次檢查所有外部 AI 工具與 GitHub 連結。

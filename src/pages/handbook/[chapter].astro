@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../../utils/url';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 export function getStaticPaths() {
   const modules = import.meta.glob('../../content/chapters/*.mdx', { eager: true });
@@ -8,4 +9,4 @@ const { chapter } = Astro.props;
 const Content = chapter.default;
 const { title, description, part, partTitle, number, previous, next } = chapter.frontmatter;
 ---
-<BaseLayout title={`${number} ${title} — PM is Life`} description={description}><article class="chapter shell"><a class="back-link" href="/handbook/">← 手冊總覽</a><header class="chapter-header"><p class="eyebrow">PART {part} · {partTitle}</p><p class="chapter-number">{number}</p><h1>{title}</h1><p class="lead">{description}</p></header><div class="mdx-content"><Content /></div><nav class="chapter-nav">{previous ? <a href={`/handbook/${previous}/`}>← 上一章</a> : <span />}{next ? <a href={`/handbook/${next}/`}>下一章 →</a> : <a href="/handbook/">回到手冊總覽</a>}</nav></article></BaseLayout>
+<BaseLayout title={`${number} ${title} — PM is Life`} description={description}><article class="chapter shell"><a class="back-link" href={withBase("/handbook/")}>← 手冊總覽</a><header class="chapter-header"><p class="eyebrow">PART {part} · {partTitle}</p><p class="chapter-number">{number}</p><h1>{title}</h1><p class="lead">{description}</p></header><div class="mdx-content"><Content /></div><nav class="chapter-nav">{previous ? <a href={withBase(`/handbook/${previous}/`)}>← 上一章</a> : <span />}{next ? <a href={withBase(`/handbook/${next}/`)}>下一章 →</a> : <a href={withBase("/handbook/")}>回到手冊總覽</a>}</nav></article></BaseLayout>
