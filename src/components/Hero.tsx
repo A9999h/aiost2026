@@ -12,11 +12,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
       {/* Background Wallpaper Layer (Systems Thinking Architectural Blueprint) */}
       <div className="absolute inset-0 pointer-events-none z-0 select-none overflow-hidden">
         <img
-          src="/hero-bg.jpeg"
+          src={`${import.meta.env.BASE_URL}hero-bg.jpeg`}
           onError={(e) => {
             const target = e.currentTarget;
-            if (target.src !== '/hero-bg-sketch.svg') {
-              target.src = '/hero-bg-sketch.svg';
+            if (!target.src.endsWith('hero-bg-sketch.svg')) {
+              target.src = `${import.meta.env.BASE_URL}hero-bg-sketch.svg`;
             }
           }}
           alt="Systems Thinking Architectural Blueprint"

@@ -13,7 +13,7 @@ export const SharkLogo: React.FC<SharkLogoProps> = ({
 }) => {
   return (
     <img
-      src="/shark-logo.svg"
+      src={`${import.meta.env.BASE_URL}shark-logo.svg`}
       alt="Layered shark logo"
       style={
         typeof size === 'number'
