@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../../utils/url';
 const blockers = [
   ['我有一堆想法，不知道哪個算是值得處理的問題', '1.1', '先找到想處理的問題', '/handbook/1-1/'],
   ['我覺得這是個問題，但不確定是不是自己的假設', '1.2', '理解使用者與情境', '/handbook/1-2/'],
@@ -12,5 +13,5 @@ const blockers = [
 ];
 ---
 <ol class="blocker-map">
-  {blockers.map(([question, number, title, href]) => <li><p>{question}</p><a href={href}><span>{number}</span>{title} →</a></li>)}
+  {blockers.map(([question, number, title, href]) => <li><p>{question}</p><a href={withBase(href)}><span>{number}</span>{title} →</a></li>)}
 </ol>

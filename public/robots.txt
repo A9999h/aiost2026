@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pm-is-life-ai-ost.pages.dev/sitemap-index.xml
+Sitemap: https://event.pmislife.com/aiost2026/sitemap-index.xml
