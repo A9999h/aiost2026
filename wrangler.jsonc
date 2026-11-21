@@ -4,5 +4,9 @@
   "assets": {
     "directory": "./dist"
   },
+  "routes": [
+    { "pattern": "event.pmislife.com/aiost2026/*", "zone_name": "pmislife.com" },
+    { "pattern": "event.pmislife.com/aiost2026", "zone_name": "pmislife.com" }
+  ],
   "previews": {}
 }
